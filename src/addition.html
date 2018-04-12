@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            var num1 = prompt('첫 번째 숫자 입력', '');
+            var num2 = prompt('두 번째 숫자 입력', '');
+
+            if(num1 == '' || num2 == '' || isNaN(num1) || isNaN(num2)) {
+                alert('올바른 값을 입력하세요.');
+            } else {
+                document.write(num1 + ' + ' + num2 + ' = ' + eval(num1 + " + " + num2));
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
