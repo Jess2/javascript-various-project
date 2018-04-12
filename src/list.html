@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            window.onload = function() { // 이 함수는 HTML 문서가 로드될 때 실행됨. 
+                var title = document.getElementById('title');
+                var list = document.getElementById('list');
+                var li = list.getElementsByTagName('li');
+                var addBtn = document.getElementById('add-btn');
+
+                for(var i=0; i<li.length; i++) {
+                    li[i].addEventListener('click', activeItem); //클릭하며 activeItem 함수 호출되도록 이벤트 리스너 등록
+                }
+
+                //리스트를 클릭하면 호출되는 함수
+                function activeItem(e) {
+                    //해당 목록을 클릭하면 제목 영역에 표시
+                    title.innerHTML = this.innerText;
+                    this.setAttribute('class', 'active', false); //클래스를 추가해서 CSS 스타일을 적용시킴
+                }
+
+                //목록 추가 버튼을 클릭하면 호출되는 함수를 addBtn에 이벤트리스너 등록함
+                addBtn.addEventListener('click', function(e) {
+                    var txt = prompt('제목 입력','');
+                    list.innerHTML += '<li>' + txt + '</li>';
+                }, false);
+            }
+
+        </script>
+        <style>
+            #add-btn {
+                padding: 5px 10px;
+                border: 0;
+                background: #f80;
+                color: white;
+                border-radius: 5px;
+            }
+
+            ul {
+                padding: 0;
+                list-style-position: inside;
+            }
+
+            li {
+                border-bottom: 1px solid #999;
+                padding: 5px 0;
+            }
+
+            .active { 
+                background: #abc;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 id='title'>할 일 목록</h1><hr>
+        <button id = 'add-btn'>목록 추가</button>
+
+        <ul id='list'>
+            <li>제목 1</li>
+            <li>제목 2</li>
+            <li>제목 3</li>
+            <li>제목 4</li>
+            <li>제목 5</li>
+        </ul>
+    </body>
+</html>
