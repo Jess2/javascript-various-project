@@ -2,7 +2,6 @@
 > Various project exercises using JavaScript
 
 ## Work In Progress
-- 구구단 출력
 - 작업 목록
 - 계산기
 - 라이트 박스
@@ -15,4 +14,4 @@
 - 스티키 메모장
 
 ## Done
-- Not yet
+- 구구단
