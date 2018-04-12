@@ -14,4 +14,4 @@
 - 스티키 메모장
 
 ## Done
-- 구구단(https://github.com/JESS2/javascript-project-book/blob/master/multiplicationTable.html)
+- [구구단](https://github.com/JESS2/javascript-project-book/blob/master/multiplicationTable.html)
