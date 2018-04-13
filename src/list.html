@@ -3,30 +3,38 @@
     <head>
         <meta charset="utf-8">
         <script>
-            window.onload = function() { // 이 함수는 HTML 문서가 로드될 때 실행됨. 
+            // 이 함수는 HTML 문서가 로드될 때 실행됨. 
+            window.onload = function() { 
                 var title = document.getElementById('title');
                 var list = document.getElementById('list');
                 var li = list.getElementsByTagName('li');
                 var addBtn = document.getElementById('add-btn');
 
-                for(var i=0; i<li.length; i++) {
-                    li[i].addEventListener('click', activeItem); //클릭하며 activeItem 함수 호출되도록 이벤트 리스너 등록
-                }
+                //클릭하면 activeItem 함수 호출되도록 이벤트 리스너 등록
+                list.addEventListener('click', activeItem);
 
                 //리스트를 클릭하면 호출되는 함수
-                function activeItem(e) {
-                    //해당 목록을 클릭하면 제목 영역에 표시
-                    title.innerHTML = this.innerText;
-                    this.setAttribute('class', 'active', false); //클래스를 추가해서 CSS 스타일을 적용시킴
+                function activeItem(event) {
+                    //클릭한 노드가 li이면
+                    if(event.target.nodeName == 'li') {
+                        title.innerHTML = event.target.innerText; //제목 영역에 표시
+                    }
+
+                    //목록 스타일 초기화
+                    for(var i=0; i<event.target.parentNode.children.length; i++) {
+                        event.target.parentNode.children[i].removeAttribute('class');
+                    }
+
+                    //클래스를 추가해서 CSS 스타일을 적용시킴
+                    event.target.setAttribute('class', 'active');
                 }
 
                 //목록 추가 버튼을 클릭하면 호출되는 함수를 addBtn에 이벤트리스너 등록함
-                addBtn.addEventListener('click', function(e) {
+                addBtn.addEventListener('click', function(event) {
                     var txt = prompt('제목 입력','');
                     list.innerHTML += '<li>' + txt + '</li>';
-                }, false);
+                });
             }
-
         </script>
         <style>
             #add-btn {
