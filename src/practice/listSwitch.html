@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            window.onload = function() {
+                var btn = document.getElementById('switch_btn');
+                var ul = document.getElementById('list');
+                var li = ul.getElementsByTagName('li');
+                var first_txt = li[0].innerHTML;
+                var last_txt = li[3].innerHTML;
+
+                btn.addEventListener('click', switchItem);
+
+                function switchItem(event) {
+                    if(li[0].innerHTML == first_txt) {
+                        li[0].innerHTML = last_txt;
+                        li[3].innerHTML = first_txt;
+                    } else {
+                        li[3].innerHTML = last_txt;
+                        li[0].innerHTML = first_txt;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id="switch_btn">switch</button>
+        <ul id="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </body>
+</html>
