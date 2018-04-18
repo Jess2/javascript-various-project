@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>form 객체</title>
+    </head>
+    <body>
+        <form name="frm">
+            <input type="text" name="txt" />
+            <input type="button" onclick="put_text()" value="click" />
+        </form>
+
+        <script>
+            function put_text() {
+                //name이 frm인 form 객체 내의 name = "txt"인 입력 요소 지정
+                var input = document.forms['frm']['txt'];
+
+                //입력 요소에 값을 입력
+                input.value = '값을 입력';
+            }
+        </script>
+    </body>
+</html>
