@@ -9,9 +9,7 @@
                 var first_txt = li[0].innerHTML;
                 var last_txt = li[3].innerHTML;
 
-                btn.addEventListener('click', switchItem);
-
-                function switchItem(event) {
+                btn.addEventListener('click', function (event) {
                     if(li[0].innerHTML == first_txt) {
                         li[0].innerHTML = last_txt;
                         li[3].innerHTML = first_txt;
@@ -19,7 +17,7 @@
                         li[3].innerHTML = last_txt;
                         li[0].innerHTML = first_txt;
                     }
-                }
+                });
             }
         </script>
     </head>
