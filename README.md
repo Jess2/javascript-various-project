@@ -2,7 +2,6 @@
 > Various project exercises using JavaScript
 
 ## Work In Progress
-- 계산기
 - 라이트 박스
 - 달력
 - 3D 페이지
@@ -13,5 +12,6 @@
 - 스티키 메모장
 
 ## Done
-- [구구단](https://github.com/JESS2/javascript-project-book/blob/master/src/multiplicationTable.html)
-- [작업 목록](https://github.com/JESS2/javascript-project-book/blob/master/src/list.html)
+- [구구단](https://github.com/JESS2/javascript-project-book/tree/master/src/multiplicationTable)
+- [작업 목록](https://github.com/JESS2/javascript-project-book/tree/master/src/list)
+- [계산기](https://github.com/JESS2/javascript-project-book/tree/master/src/calculator)
