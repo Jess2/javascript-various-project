@@ -28,7 +28,7 @@
             var frm = document.frm; //form 객체 지정
             var id = frm.my_id; //id 입력란(my_id) 객체 지정
             var pwd = frm.my_pwd; //password 입력란(my_pwd) 객체 지정
-            var send_btn = document.frm.send; //전송 버튼 객체 지정
+            var send_btn = frm.send; //전송 버튼 객체 지정
 
             send_btn.addEventListener('click', function(event) {
                 var newId = id.value,
