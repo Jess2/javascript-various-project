@@ -1,6 +1,6 @@
 window.onload = function() {
     var inp = document.forms['cal']; //name이 'frm'인 form객체를 선택
-    var input = cal.getElementsByTagName('input'); //태그명이 input인 문서 객체를 지정. 배열로 참조됨
+    var inputs = cal.getElementsByTagName('input'); //태그명이 input인 문서 객체를 지정. 배열로 참조됨
     var cls_btn = document.getElementsByClassName('cls_btn')[0]; //초기화 버튼을 지정. 배열로 참조됨
     var result_btn = document.getElementsByClassName('result_btn')[0]; //결과 버튼을 지정. 배열로 참조됨
 
@@ -30,10 +30,10 @@ window.onload = function() {
 
 
     //숫자 및 사칙 연산 버튼
-    for(var i=0; i<input.length; i++) {
+    for(var i=0; i<inputs.length; i++) {
         //숫자와 사칙 연산자만 입력 처리
-        if(input[i].value != '=' && input[i].value != 'clear') {
-            input[i].onclick = function() {
+        if(inputs[i].value != '=' && inputs[i].value != 'clear') {
+            inputs[i].onclick = function() {
                 calc(this.value); //헌재 클릭한 버튼 객체의 value 값을 calc 함수에 전달함
             }
         }
