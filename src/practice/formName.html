@@ -17,42 +17,24 @@
 <body>
     <form name="frm">
         <label for ="id">ID: </label>
-        <input type="text" id="id" name="my_id" />
+        <input type="text" id="id" />
         <label for="pwd">password: </label>
-        <input type="password" id="pwd" name="my_pwd" />
+        <input type="password" id="pwd" />
 
         <input type="button" name="send" value="로그인" />
     </form>
 
     <script>
             var frm = document.frm; //form 객체 지정
-            var id = frm.my_id; //id 입력란(my_id) 객체 지정
-            var pwd = frm.my_pwd; //password 입력란(my_pwd) 객체 지정
-            var send_btn = frm.send; //전송 버튼 객체 지정
-
-            send_btn.addEventListener('click', function(event) {
-                var newId = id.value,
-                    newPwd = pwd.value;
     
-                //빈값 검사
-                if(newId == '' || newPwd == '') {
+            frm.send.addEventListener('click', function() {
+                if (!frm.id.value || !frm.pwd.value) {
                     alert('아이디 또는 비밀번호가 입력되지 않았습니다!');
                 } else {
-                    alert(newId + '님 환영합니다!');
+                    alert(frm.id.value + '님 환영합니다!');
+                    alert('비밀번호는 ' + frm.pwd.value + ' 입니다.')
                 }
             });
-    
-            // send_btn.onclick = function() {
-            //     var newId = myId.value,
-            //         newPwd = pwd.value;
-    
-            //     //빈값 검사
-            //     if(newId == '' || newPwd == '') {
-            //         alert('아이디 또는 비밀번호가 입력되지 않았습니다!');
-            //     } else {
-            //         alert(myId.value + '님 환영합니다!');
-            //     }
-            // };
         </script>
 </body>
 </html>
