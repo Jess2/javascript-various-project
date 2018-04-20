@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS 연습</title>
+    </head>
+    <body>
+        <form name="frm">
+            <p>다음 빈칸에 올바른 값을 입력하세요.</p>
+            <input type="text" name="a1" size="3" value="9" /> +
+            <input type="text" name="a2" size="3" value="3" /> =
+            <input type="text" name="answer" size="3" />
+            <br /><br />
+            <input type="button" onclick="result()" name="commit" value="확인" />
+        </form>
+
+        <script>
+            var frm = document.forms['frm'];
+
+            frm['commit'].addEventListener('click', function() {
+                cal(frm['answer'].value);
+            });
+
+            function cal(ans) {
+                var result = Number(frm['a1'].value) + Number(frm['a2'].value);
+                
+                if(ans == result) {
+                    alert('정답입니다!');
+                } else {
+                    alert('틀렸습니다!');
+                }
+            }
+
+        </script>
+    </body>
+</html>
