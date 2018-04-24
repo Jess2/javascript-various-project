@@ -5,9 +5,35 @@
         <title>라이트 박스</title>
         <link rel= "stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="lightBox.js"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
     <body>
+        <!-- 헤더 -->
+        <header>
+            <h1>Light Box</h1>
+            <img class="thumb" src="img/img01.jpg" width="100" onclick="lightbox_open(1)" />
+            <img class="thumb" src="img/img02.jpg" width="100" onclick="lightbox_open(2)" />
+            <img class="thumb" src="img/img03.jpg" width="100" onclick="lightbox_open(3)" />
+        </header>
 
+        <!-- 라이트 박스 배경 -->
+        <div id="block"></div>
+        
+        <div id="lightbox">
+            <h1>풍경 사진</h1>
+            <p>아름다운 풍경 사진입니다. 지금은 JavaScript 공부 중입니다.</p>
+            <figure>
+                <img src="img/img01.jpg" class="active" alt="" />
+                <img src="img/img02.jpg" alt="" />
+                <img src="img/img03.jpg" alt="" />
+            </figure>
+
+            <div class="indicator">
+                <button onclick="change_img(this.innerHTML)">1</button>
+                <button onclick="change_img(this.innerHTML)">2</button>
+                <button onclick="change_img(this.innerHTML)">3</button>
+            </div>
+            <div class="btn-close" onclick="lightbox_close()">X</div>
+        </div>
     </body>
 </html>
