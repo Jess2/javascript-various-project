@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>이미지 교체</title>
+        <style>
+            img {
+                width: 300px;
+            }
+        </style>
+        <script>
+            var imgs = document.getElementsByTagName('img');            
+
+            function changeImg() {
+                var first = imgs[0].getAttribute('src');
+                var last = imgs[2].getAttribute('src');
+                if(first == imgs[0].getAttribute('src')) {
+                    imgs[0].setAttribute('src', last);
+                    imgs[2].setAttribute('src', first);
+                } else {
+                    imgs[2].setAttribute('src', last);
+                    imgs[0].setAttribute('src', first);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img src="img/img01.jpg" name="img1" />
+        <img src="img/img02.jpg" name="img2" />
+        <img src="img/img03.jpg" name="img3" />
+        
+        <div>
+            <button onclick="changeImg()">Change Image</button>
+        </div>
+    </body>
+</html>
