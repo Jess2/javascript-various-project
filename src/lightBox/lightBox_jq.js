@@ -3,6 +3,7 @@ window.onload = function() {
     var $indicators = $('.indicator button');
     var $lightbox = $('#lightbox');
     var $block = $('#block');
+    var $imgs = $('figure > img');
 
     //라이트박스 표시
     function lightbox_open(num) {
@@ -20,8 +21,6 @@ window.onload = function() {
 
     //이미지 전환 표시 함수
     function change_img(val) {
-        var $imgs = $('figure > img');
-
         for(var i=0; i<$imgs.length; i++) {
             $imgs.eq(i).removeAttr('class');
         }
@@ -45,5 +44,11 @@ window.onload = function() {
         var img_num = $(this).index(); //index() 메소드는 현재 이미지 객체의 배열 변호를 반환함.
         change_img(img_num);
     });
+
+    //라이트박스 안에 있는 이미지 클릭 시 click 이벤트
+    $imgs.click(function() {
+        var num = $(this).index();
+        $indicators.eq(num).focus(); //해당 버튼에 css 주기 위해 focus
+    })
 
 }
