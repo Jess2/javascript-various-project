@@ -2,7 +2,7 @@
 > Various project exercises using JavaScript
 
 ## Work In Progress
-- 달력
+- [달력](https://github.com/JESS2/javascript-project-book/tree/master/src/calendar)
 - 3D 페이지
 - 다이내믹 배너
 - 지도
