@@ -10,8 +10,8 @@
 - 스티키 메모장
 
 ## Done
-- [구구단](https://github.com/JESS2/javascript-project-book/tree/master/src/multiplicationTable)
-- [작업 목록](https://github.com/JESS2/javascript-project-book/tree/master/src/list)
-- [계산기](https://github.com/JESS2/javascript-project-book/tree/master/src/calculator)
-- [라이트 박스](https://github.com/JESS2/javascript-project-book/tree/master/src/lightBox)
-- [달력](https://github.com/JESS2/javascript-project-book/tree/master/src/calendar)
+- [구구단](https://jess2.github.io/javascript-project-book/tree/master/src/multiplicationTable)
+- [작업 목록](https://jess2.github.io/javascript-project-book/tree/master/src/list)
+- [계산기](https://jess2.github.io/javascript-project-book/src/calculator/)
+- [라이트 박스](https://jess2.github.io/javascript-project-book/tree/master/src/lightBox)
+- [달력](https://jess2.github.io/javascript-project-book/tree/master/src/calendar)
