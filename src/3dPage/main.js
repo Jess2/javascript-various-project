@@ -4,11 +4,10 @@ window.onload = function() {
         indicator = document.getElementById('indicator'),
         indicator_li = indicator.querySelectorAll('li');
 
-    var yDeg = 0,
-        indicator_num = 1,
-        indicator_length = page.length,
-        w = page[0].offsetWidth,
-        page_angle = 0,
+    var yDeg = 0, //페이지 전환시 회전시키는 각도
+        indicator_num = 1, //현재 표시되는 페이지의 번호 
+        w = page[0].offsetWidth, //현재 페이지의 폭
+        page_angle = 0, //각 페이지 4면체의 배치를 위한 각도
         page_vector = 0;
 
     var hammer = new Hammer(wrapper);
@@ -30,8 +29,8 @@ window.onload = function() {
     //인디케이터 초기화
     function init_indicator() {
         //인디케이터 표시
-        for(var i=0; i<indicator_length; i++) {
-            indicator.innerHTML += '<li>' + (i+1) + '</li>';
+        for(var i=0; i<page.length; i++) {
+            indicator.innerHTML += '<li>' + (i+1) + '</li>'; //페이지의 개수만큼 인디케이터 버튼 목록을 추가
         }
 
         indicator_li = indicator.querySelectorAll('li');
@@ -64,7 +63,7 @@ window.onload = function() {
     //터치 swipe left
     hammer.on('swipeleft', function(e) {
         //인디케이터(피이지) 이동 범위 내이면
-        if(indicator_num < indicator_length) {
+        if(indicator_num < page.length) {
             page_vector = 1;
         } else {
             page_vector = 0;
