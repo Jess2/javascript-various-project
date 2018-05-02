@@ -1,8 +1,7 @@
 # javascript-project-book
 > Various project exercises using JavaScript
 
-## Work In Progress
-- 다이내믹 배너
+## Work In Progres
 - 지도
 - 날씨 위젯
 - 퀴즈 게임
@@ -15,3 +14,4 @@
 - [라이트 박스](https://jess2.github.io/javascript-project-book/src/lightBox)
 - [달력](https://jess2.github.io/javascript-project-book/src/calendar)
 - [3D 페이지](https://jess2.github.io/javascript-project-book/src/3dPage)
+- [배너](https://jess2.github.io/javascript-project-book/src/banner)
