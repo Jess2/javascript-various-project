@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Map</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>     	
+        <header>
+            <h1>JESS2</h1>
+            <nav>
+                <span><a href="http://jess2.xyz" target="_blank">Home</a></span>
+                <span><a href="http://jess2.xyz" target="_blank">About</a></span>
+                <span><a href="http://jess2.xyz" target="_blank">Contact</a></span>
+            </nav>
+        </header>
+        <main> 
+            <figure class="banner">
+                <div class="figure_header">
+                    <h2>Contact me</h2>
+                    <p>Hello, this is Jess2's JavaScript Study.</p>
+                </div>
+            </figure>	
+            <section>
+                <article>
+                    <div id="map"><br>&nbsp;지도가 표시될 영역</div>
+                </article>
+                <aside>
+                    <form action="">
+                        <fieldset>
+                            <legend>Send us Email</legend>
+                            <div class="form-group">
+                                <label for="name">Name</label>	
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="msg">Message</label>
+                                <textarea name="msg" id="msg" cols="30" rows="8"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button>SEND</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </aside>
+            </section>
+        </main>
+
+        <script src="main.js"></script>
+        
+        <!-- API 키 : AIzaSyDRZmTbfk_JtrdlPrsoBKMZEYijrJDDBN0 -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRZmTbfk_JtrdlPrsoBKMZEYijrJDDBN0&callback=initMap"async defer></script>
+    </body>
+</html>
