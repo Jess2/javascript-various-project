@@ -24,8 +24,8 @@ function initMap() {
     ];      
     // 위치 정보 변수
     var my_position = {
-        lat: 35.667306, 
-        lng: 139.699969
+        lat: 37.32238,
+        lng: 127.09444699999995
     };
     // 맵 객체를 생성하고 id=‘map’에 지도 표시
     var map = new google.maps.Map(document.getElementById('map'), {
