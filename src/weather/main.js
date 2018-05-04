@@ -22,8 +22,8 @@ $.getJSON(url, function(data){
     var icon_url = 'http://openweathermap.org/img/w/' + icon;
 
     //날씨 정보 표시
-    $('#weather_info > city').html(`${city}/${country}`);
-    $('#weather_info  .icon').html(`<img src='${icon_url}.png'>`);
+    $('#weather_info .city').html(`${city}/${country}`);
+    $('#weather_info .icon').html(`<img src='${icon_url}.png'>`);
     $('#weather_info .w_id').html(wmain);
     $('#weather_info .temp_min').html(`${parseInt(temp_min-273.15)}&deg; min`);
     $('#weather_info .temp_max').html(`${parseInt(temp_max-273.15)}&deg; max`);
