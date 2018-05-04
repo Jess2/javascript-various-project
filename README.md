@@ -1,4 +1,4 @@
-# javascript-project-book
+# javascript-various-project
 > Various project exercises using JavaScript
 
 ## Work In Progres
