@@ -66,13 +66,13 @@ function result() {
 
     //점수별 결과 텍스트 출력
     if(per < 60) {
-        txt += `<h2 stype"color:red">더 분발하세요.</h2>`;
+        txt += '<h2 style="color:red">더 분발하세요.</h2>';
         quiz_div.innerHTML = txt;
     } else if(per >= 60 && per < 80) {
-        txt += `<h2 stype"color:red">무난한 점수네요.</h2>`;
+        txt += `<h2 style="color:green">무난한 점수네요.</h2>`;
         quiz_div.innerHTML = txt;
     } else if(per >= 80) {
-        txt += `<h2 stype"color:red">훌륭합니다.</h2>`;
+        txt += `<h2 style="color:blue">훌륭합니다.</h2>`;
         quiz_div.innerHTML = txt;
     }
 }
