@@ -2,7 +2,6 @@
 > Various project exercises using JavaScript
 
 ## Work In Progres
-- 퀴즈 게임
 - 스티키 메모장
 
 ## Done
@@ -15,3 +14,4 @@
 - [배너](https://jess2.github.io/javascript-various-project/src/banner)
 - [지도](https://jess2.github.io/javascript-various-project/src/map)
 - [날씨 위젯](https://jess2.github.io/javascript-various-project/src/weather)
+- [퀴즈 게임](https://jess2.github.io/javascript-various-project/src/quiz)
