@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS 연습</title>
+    </head>
+    <body>
+        <h1 id="title">여기를 변경해주세요.</h1>
+
+        <script>
+            var title = document.getElementById('title');
+
+            title.style.color = 'white';
+            title.style.background = 'orange';
+            title.innerHTML = "JavaScript로 문서를 조작";
+        </script>
+
+        <div>
+            <span>first in "p"</span>
+        </div>
+        <span>second</span>
+        <div>
+            <span>third in "p"</span>
+        </div>
+    
+
+        <script>
+            var span = document.querySelectorAll('div > span');
+
+            for(var i=0; i<span.length; i++) {
+                span[i].style.color = "red";
+            }
+        </script>
+
+        <div class="select">
+            선택된 문서 객체
+        </div>
+
+        <div>
+            선택되지 않은 문서 객체
+        </div>
+
+        <div class="select">
+            선택된 문서 객체2
+        </div>
+
+        <script>
+            var selects = document.getElementsByClassName('select');
+
+            selects[0].style.color = "red";
+            selects[1].style.color = "blue";
+        </script>
+
+
+        <li>first</li>
+        <ul>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+        
+        <script>
+            var li = document.querySelector('ul > li');
+        
+            li.style.color = "red";
+        </script>
+
+    </body>
+</html>
