@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .one {
+            border: 1px solid red;
+            height: 100px;
+        }
+        .two {
+            border: 1px solid blue;
+            height: 60px;
+            margin: 10px;
+        }
+        .three {
+            border: 1px solid green;
+            height: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button>add one item</button>
+    <div class="one">
+        one
+		<div class="two">
+            two
+			<div class="three">
+                three
+			</div>
+		</div>
+	</div>
+
+
+
+    <script>
+        var button = document.querySelector('button');
+        button.addEventListener('click', addItem);
+
+        function addItem(event) {
+            console.log(event);
+        }
+
+        var divs = document.querySelectorAll('div');
+        divs.forEach(function(div) {
+            div.addEventListener('click', logEvent); //이벤트 버블링
+            //div.addEventListener('click', logEvent, true); //이벤트 캡쳐링
+        });
+
+        function logEvent(event) {
+            event.stopPropagation();
+            console.log(event.currentTarget.className);
+        }
+    </script>
+</body>
+</html>
