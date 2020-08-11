@@ -1,9 +1,6 @@
 # javascript-various-project
 > Various project exercises using JavaScript
 
-## Work In Progres
-- [스티키 메모장](https://jess2.github.io/javascript-various-project/src/memo)
-
 ## Done
 - [구구단](https://jess2.github.io/javascript-various-project/src/multiplicationTable)
 - [작업 목록](https://jess2.github.io/javascript-various-project/src/list)
